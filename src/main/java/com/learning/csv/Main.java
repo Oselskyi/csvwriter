@@ -17,8 +17,8 @@ public class Main {
         new Person(3, "Victor", "Shtil", 32));
 
 
-        Converter<Person> personConverter = new CSVConverter<>(new CSVWriter("src/test/resources/test.csv"));
-        personConverter.convert(new Person(1, "Antoha", "MC", 15));
+//        Converter<Person> personConverter = new CSVConverter<>(new CSVWriter("src/test/resources/test.csv"));
+//        personConverter.convert(new Person(1, "Antoha", "MC", 15));
 
 
 

@@ -7,7 +7,7 @@ public class MemoryWriter implements Writer {
 
     @Override
     public void write(String str) {
-        shouldBeenWritten = str;
+        shouldBeenWritten += str;
     }
 
     public String getShouldBeenWritten() {

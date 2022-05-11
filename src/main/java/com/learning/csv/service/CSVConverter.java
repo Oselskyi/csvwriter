@@ -4,16 +4,15 @@ import com.learning.csv.entity.ConverterEntity;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Collectors;
 
 public class CSVConverter<T extends ConverterEntity> implements Converter<T> {
 
-    private final Writer writer;
+//    private final Writer writer;
 
-    public CSVConverter(Writer writer) {
-        this.writer = writer;
-    }
+//    public CSVConverter(Writer writer) {
+//        this.writer = writer;
+//    }
 
 //    @Override
 //    public void convert(List<T> list) {
@@ -43,7 +42,7 @@ public class CSVConverter<T extends ConverterEntity> implements Converter<T> {
 
     @SafeVarargs
     @Override
-    public final void convert(T... objects) {
+    public final String convert(T... objects) {
 
         StringBuilder sb = new StringBuilder();
 
@@ -58,7 +57,8 @@ public class CSVConverter<T extends ConverterEntity> implements Converter<T> {
             sb.append(element);
             sb.append('\n');
         }
-        writer.write(sb.toString());
+//        writer.write(sb.toString());
+        return sb.toString();
     }
 
     private String getHeader(T obj) {
